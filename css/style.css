@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    user-select: none;
+}
+
+/******************************** left content **********************************/
+
+.left {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to bottom, orange,red);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.left > .img {
+    width: 100%;
+    margin-top: 100px;
+    transition: .2s linear;
+    object-fit: contain;
+}
+
+/******************************** right content **********************************/
+.right {
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.title {
+    display: flex;
+    height: 100px;
+}
+
+.sup-title {
+    text-transform: uppercase;
+    color: red;
+    font-weight: bold;
+    margin-top: 66px;
+    margin-left: 20px;
+}
+
+.title-price {
+    display: inline-flex;
+    overflow: hidden;
+    width: 150px;
+    margin-left: 120px;
+}
+
+.sup-title__price {
+    width: 200px;
+    font-size: 80px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.sup-title__price:nth-of-type(2) {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+sup {
+    font-size: 40px;
+}
+
+.text {
+    text-transform: uppercase;
+    color: black;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.stars {
+    margin-top: 15px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+
+.stars > i {
+    color: gold;
+    font-weight: normal;
+}
+
+
+.stars > i:nth-of-type(1),
+.stars > i:nth-of-type(2),
+.stars > i:nth-of-type(3),
+.stars > i:nth-of-type(4) {
+    color: gold;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 20px;
+    line-height: 26px;
+    color: #bbb;
+}
+
+.sub-number {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sub-number > input {
+    display: none;
+}
+
+.sub-number > label {
+    cursor: pointer;
+}
+
+#nbr1:checked+label,
+#nbr2:checked+label,
+#nbr3:checked+label,
+#nbr4:checked+label,
+#nbr5:checked+label {
+    color: red;
+    font-weight: bold;
+}
+
+.dots {
+    width: 100%;
+    height: 50px;
+}
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.dot1 {
+    background-color: black;
+}
+
+.dot2 {
+    background-color: rgb(0, 195, 255);
+}
+
+.dot3 {
+    background-color: violet;
+}
+
+.active.dot::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -5.5px;
+    left: -5.5px;
+    border: 3px solid black;
+}
+
+.btn {
+    width: 70%;
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin: 30px 0 0 80px;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 0, 85);
+    color: white;
+    box-shadow: 0 0 20px rgb(255, 0, 85);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 30px rgb(255, 0, 85);
+    color: gold;
+}
